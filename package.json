@@ -1,0 +1,35 @@
+{
+  "name": "prismic-docs",
+  "version": "0.0.1",
+  "description": "Developer documentation website for Prismic",
+  "private": true,
+  "author": {
+    "name": "Levi Gable",
+    "email": "levimykel@gmail.com"
+  },
+  "dependencies": {
+    "next": "^9.1.4",
+    "nookies": "^2.0.8",
+    "prismic-javascript": "^2.0.3",
+    "prismic-reactjs": "^1.0.0",
+    "react": "^16.10.2",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dom": "^16.10.2"
+  },
+  "devDependencies": {
+    "now": "^16.7.3"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "scripts": {
+    "dev": "now dev",
+    "now-build": "next build",
+    "deploy": "now"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prismicio/nextjs-blog.git"
+  },
+  "license": "Apache-2.0"
+}

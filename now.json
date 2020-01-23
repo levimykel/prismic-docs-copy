@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "prismic-docs",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }],
+  "routes": [{ "src": "/", "status": 302, "headers": { "Location": "/docs" } }]
+}

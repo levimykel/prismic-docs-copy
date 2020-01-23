@@ -1,0 +1,66 @@
+{
+  "Main": {
+    "prismic_title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Prismic Title"
+      }
+    },
+    "language": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "id": {
+            "type": "Text"
+          },
+          "svg": {
+            "type": "Text",
+            "config": {
+              "label": "svg"
+            }
+          },
+          "name": {
+            "type": "StructuredText",
+            "config": {
+              "single": "heading2",
+              "label": "Name"
+            }
+          },
+          "link": {
+            "type": "Link",
+            "config": {
+              "label": "link"
+            }
+          },
+          "icon": {
+            "type": "Image",
+            "config": {
+              "thumbnails": [],
+              "label": "Icon"
+            }
+          }
+        },
+        "label": "Language"
+      }
+    }
+  },
+  "Additionals": {
+    "typo-error": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Intercom Typo Button",
+        "placeholder": "Intercom Typo Button"
+      }
+    },
+    "typo-error-message": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label": "Typo Error Message",
+        "placeholder": "Typo Error Message"
+      }
+    }
+  }
+}

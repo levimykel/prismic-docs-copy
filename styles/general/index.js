@@ -1,0 +1,7 @@
+export { footerStyles } from './footer'
+export { generalStyles } from './general'
+export { grid } from './grid'
+export { mainStyles } from './main'
+export { notFoundStyles } from './notFound'
+export { reset } from './reset'
+export { typography } from './typography'

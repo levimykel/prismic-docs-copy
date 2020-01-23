@@ -1,0 +1,6 @@
+export { default as CodeSnippet } from './CodeSnippet'
+export { default as CtaButton } from './CtaButton'
+export { default as HighlightedText } from './HighlightedText'
+export { default as Image } from './Image'
+export { default as Table } from './Table'
+export { default as Text } from './Text'

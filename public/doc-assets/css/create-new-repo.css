@@ -1,0 +1,763 @@
+
+.authentication-loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: none
+}
+
+.authentication-loader.fadein {
+  z-index: 1003;
+  display: block
+}
+
+.authentication-loader.fadein .front {
+  -webkit-animation-name: loading;
+  animation-name: loading
+}
+
+.authentication-loader.done .flipper {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg)
+}
+
+.authentication-loader.done .back:before {
+  -webkit-animation-name: punch;
+  animation-name: punch
+}
+
+.authentication-loader .flipper {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  width: 80px;
+  height: 80px;
+  transition: -webkit-transform .6s;
+  transition: transform .6s;
+  transition: transform .6s, -webkit-transform .6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  margin: auto
+}
+
+.authentication-loader .back,
+.authentication-loader .front {
+  width: 80px;
+  height: 80px;
+  position: fixed;
+  border-radius: 50%
+}
+
+.authentication-loader .back:before,
+.authentication-loader .front {
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden
+}
+
+.authentication-loader .front {
+  background-image: url(../images/prismiclogo.svg);
+  background-color: #15d8a7;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite
+}
+
+@-webkit-keyframes loading {
+
+  0%,
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+  }
+}
+
+@keyframes loading {
+
+  0%,
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
+  }
+}
+
+.authentication-loader .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: #5062bb
+}
+
+.authentication-loader .back:before {
+  content: "";
+  display: block;
+  width: inherit;
+  height: inherit;
+  background-image: url(../images/punch.png);
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: backwards;
+  animation-fill-mode: backwards
+}
+
+@-webkit-keyframes punch {
+  0% {
+    -webkit-transform: scale(.5);
+    transform: scale(.5)
+  }
+
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5)
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+@keyframes punch {
+  0% {
+    -webkit-transform: scale(.5);
+    transform: scale(.5)
+  }
+
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5)
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    transform: scale(1)
+  }
+}
+
+.authentication-loader h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 25px;
+  transition: all .2s;
+  color: #fff
+}
+
+.authentication-loader h1 a {
+  text-transform: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+  text-decoration: none
+}
+
+.authentication-loader h1.done {
+  opacity: 0;
+  position: relative;
+  margin-top: 0;
+  transition: all .2s
+}
+
+.authentication-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: rgba(8, 20, 43, 0);
+  transition: background-color .4s ease-in-out;
+  display: none;
+  padding-bottom: 70px
+}
+
+.authentication-overlay.pre-fadein {
+  display: block
+}
+
+.authentication-overlay.fadein {
+  z-index: 1001;
+  background: linear-gradient(180deg, #151824, rgba(21, 24, 36, .9))
+}
+
+.authentication-popup {
+  font-family: -apple-system, BlinkMacSystemFont, Hind Vadodara, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  border-radius: 4px;
+  font-size: 15px;
+  position: relative;
+  left: 50%;
+  padding: 0;
+  -webkit-transform: translateX(-50%) scale(.95);
+  transform: translateX(-50%) scale(.95);
+  transition: height .2s, width .2s, opacity .2s, -webkit-transform .2s cubic-bezier(.3, 0, 0, 1.3);
+  transition: height .2s, width .2s, transform .2s cubic-bezier(.3, 0, 0, 1.3), opacity .2s;
+  transition: height .2s, width .2s, transform .2s cubic-bezier(.3, 0, 0, 1.3), opacity .2s, -webkit-transform .2s cubic-bezier(.3, 0, 0, 1.3);
+  width: 500px;
+  max-width: 100%;
+  display: none;
+  opacity: 0
+}
+
+.authentication-popup ::-webkit-input-placeholder {
+  color: #8091a5
+}
+
+.authentication-popup :-moz-placeholder,
+.authentication-popup ::-moz-placeholder {
+  color: #8091a5;
+  opacity: 1
+}
+
+.authentication-popup :-ms-input-placeholder {
+  color: #8091a5
+}
+
+@media screen and (max-width:39.9375em) {
+  .authentication-popup {
+    top: 0;
+    min-height: 100vh;
+    margin-bottom: 0
+  }
+}
+
+@media screen and (min-width:40em) {
+  .authentication-popup {
+    top: 70px;
+    margin-bottom: 70px
+  }
+}
+
+.authentication-popup img {
+  display: block;
+  margin: auto auto 15px
+}
+
+.authentication-popup h2 {
+  font-family: -apple-system, BlinkMacSystemFont, Hind Vadodara, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 24px;
+  color: #313541;
+  font-weight: 500;
+  letter-spacing: .36px;
+  line-height: 38px;
+  text-align: center;
+  margin: 0
+}
+
+.authentication-popup h2 span {
+  display: block;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #667587;
+  line-height: 30px
+}
+
+.authentication-popup h2 .plan-name {
+  display: inline-block;
+  font-weight: 600
+}
+
+.authentication-popup h2 .plan-price {
+  display: inline-block;
+  background: #f0f8ff;
+  padding: 0 8px;
+  border-radius: 2px;
+  color: #4682b4;
+  font-size: 12px;
+  line-height: 24px
+}
+
+.authentication-popup label {
+  width: 100%;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #3f4a56;
+  letter-spacing: .2px;
+  line-height: 24px
+}
+
+.authentication-popup.pre-fadein {
+  z-index: 1003;
+  display: block
+}
+
+.authentication-popup.fadein {
+  transition: all .2;
+  -webkit-transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1);
+  opacity: 1
+}
+
+.authentication-popup .popup-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .2s
+}
+
+.authentication-popup .popup-wrapper.fadein {
+  opacity: 1
+}
+
+.authentication-popup * {
+  box-sizing: border-box
+}
+
+.authentication-popup a {
+  text-decoration: none;
+  color: #6284e4
+}
+
+.authentication-popup a:hover {
+  text-decoration: underline
+}
+
+.authentication-popup .icon-close {
+  z-index: 1003;
+  position: absolute;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 5px
+}
+
+@media screen and (max-width:39.9375em) {
+  .authentication-popup .icon-close {
+    color: #2c2b59;
+    top: 10px;
+    right: 10px
+  }
+}
+
+@media screen and (min-width:40em) {
+  .authentication-popup .icon-close {
+    border-radius: 50%;
+    color: #8091a5;
+    background-color: #eaeff5;
+    top: 10px;
+    right: 10px;
+    padding-top: 1px
+  }
+
+  .authentication-popup .icon-close:hover {
+    background-color: #e0e7f0
+  }
+}
+
+.authentication-popup .content {
+  height: 100%
+}
+
+@media screen and (max-width:39.9375em) {
+  .authentication-popup .content {
+    padding: 30px 0
+  }
+}
+
+.authentication-popup .content .popup-header {
+  padding: 40px 70px
+}
+
+@media screen and (max-width:39.9375em) {
+  .authentication-popup .content .popup-header {
+    padding: 40px 35px
+  }
+}
+
+.authentication-popup .content form {
+  display: block;
+  padding: 40px 75px;
+  background-image: linear-gradient(0deg, hsla(0, 0%, 100%, 0) 90%, #f5f6f8)
+}
+
+@media screen and (max-width:39.9375em) {
+  .authentication-popup .content form {
+    padding: 40px
+  }
+}
+
+.authentication-popup .content.loading [type=submit] {
+  font-size: 0
+}
+
+.authentication-popup .content.loading .spinning-loader {
+  display: block
+}
+
+.authentication-popup .content input[type=email],
+.authentication-popup .content input[type=password],
+.authentication-popup .content input[type=text] {
+  outline: none;
+  border: 1px solid #dfe6ee;
+  border-radius: 2px;
+  color: #3f4a56;
+  font-weight: 500;
+  width: 100%;
+  margin: auto;
+  font-size: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 35px
+}
+
+.authentication-popup .content input[type=email]:focus,
+.authentication-popup .content input[type=password]:focus,
+.authentication-popup .content input[type=text]:focus {
+  border: 1px solid #6284e4;
+  box-shadow: 0 0 3px 0 rgba(85, 107, 218, .3)
+}
+
+.authentication-popup .content input[type=password] {
+  padding-right: 80px
+}
+
+.authentication-popup .content input:focus {
+  outline: none
+}
+
+.authentication-popup .content .spinning-loader {
+  top: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: none
+}
+
+.authentication-popup .content [type=submit] {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 40px;
+  cursor: pointer;
+  transition: .1s;
+  border: none;
+  background: #6284e4;
+  text-shadow: 0 1px 3px rgba(36, 46, 180, .4);
+  outline: none;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  height: 56px;
+  width: 100%;
+  margin-top: 5px
+}
+
+.authentication-popup .content [type=submit]:not([disabled]):hover {
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08)
+}
+
+.authentication-popup .content [type=submit]:disabled {
+  background-color: #7895e8;
+  cursor: default
+}
+
+.authentication-popup .content .show-password {
+  cursor: pointer;
+  z-index: 1004;
+  color: #8091a5;
+  width: 60px;
+  height: 35px;
+  position: absolute;
+  right: 10px;
+  top: 24px;
+  text-align: right;
+  line-height: 35px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase
+}
+
+.authentication-popup .content .show-password:after {
+  content: "show"
+}
+
+.authentication-popup .content .show-password.active:after {
+  content: "hide"
+}
+
+.authentication-popup .content p {
+  margin-top: 0;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px
+}
+
+.authentication-popup .content p.half {
+  display: flex
+}
+
+.authentication-popup .content p.half>* {
+  flex: 1
+}
+
+.authentication-popup .content p.half :first-child {
+  margin-right: 15px
+}
+
+.authentication-popup .content p#domain {
+  position: relative;
+  padding-bottom: 25px
+}
+
+.authentication-popup .content p#domain:before {
+  content: "Start typing and we will validate the repository name.";
+  display: block;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #667587;
+  position: absolute;
+  bottom: 0;
+  white-space: nowrap
+}
+
+.authentication-popup .content p#domain:after {
+  font-family: Material Icons;
+  content: "more_horiz";
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 35px;
+  top: 0;
+  border-radius: 0 4px 4px 0;
+  line-height: 35px;
+  text-align: center;
+  color: #8797a9;
+  font-size: 16px
+}
+
+.authentication-popup .content p#domain[data-error]:after {
+  content: "cancel";
+  color: #cd5c5c
+}
+
+.authentication-popup .content p#domain[data-error]:before {
+  content: attr(data-error);
+  color: #cd5c5c
+}
+
+.authentication-popup .content p#domain[data-error] input[type=email],
+.authentication-popup .content p#domain[data-error] input[type=email]:focus,
+.authentication-popup .content p#domain[data-error] input[type=password],
+.authentication-popup .content p#domain[data-error] input[type=password]:focus,
+.authentication-popup .content p#domain[data-error] input[type=text],
+.authentication-popup .content p#domain[data-error] input[type=text]:focus {
+  border: 1px solid #cd5c5c;
+  box-shadow: 0 0 3px 0 rgba(209, 92, 92, .3)
+}
+
+.authentication-popup .content p#domain[data-success]:after {
+  content: "check_circle";
+  color: #228b22
+}
+
+.authentication-popup .content p#domain[data-success]:before {
+  content: attr(data-success);
+  color: #228b22
+}
+
+.authentication-popup .content p#domain[data-success] input[type=email],
+.authentication-popup .content p#domain[data-success] input[type=email]:focus,
+.authentication-popup .content p#domain[data-success] input[type=password],
+.authentication-popup .content p#domain[data-success] input[type=password]:focus,
+.authentication-popup .content p#domain[data-success] input[type=text],
+.authentication-popup .content p#domain[data-success] input[type=text]:focus {
+  border: 1px solid #228b22;
+  box-shadow: 0 0 3px 0 rgba(36, 139, 34, .3)
+}
+
+.authentication-popup .content p#domain input {
+  padding-right: 55px
+}
+
+.authentication-popup .content textarea {
+  outline: 0;
+  resize: none;
+  height: 90px;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #dfe6ee;
+  border-radius: 2px;
+  color: #3f4a56;
+  font-weight: 500;
+  width: 100%;
+  font-size: 12px
+}
+
+.authentication-popup .content textarea:focus {
+  border: 1px solid #6284e4;
+  box-shadow: 0 0 3px 0 rgba(85, 107, 218, .3)
+}
+
+.authentication-popup .content hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+  padding: 0
+}
+
+.authentication-popup .content .sso {
+  text-align: center;
+  color: #667587;
+  margin-bottom: 10px
+}
+
+.authentication-popup .content .infos {
+  font-size: 11px;
+  color: #667587;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+  transition: all .2s linear
+}
+
+.authentication-popup .content .message {
+  position: relative;
+  margin-top: 20px
+}
+
+.authentication-popup .content .message.error .feedback {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0)
+}
+
+.authentication-popup .content .message.error .infos {
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%)
+}
+
+.authentication-popup .content .feedback {
+  font-size: 14px;
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  color: #cd5c5c;
+  height: 17px;
+  position: absolute;
+  opacity: 0;
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+  transition: all .2s linear
+}
+
+.authentication-popup .content .card-info {
+  font-style: italic;
+  text-align: left;
+  margin-bottom: 15px
+}
+
+#cardholder-name-input {
+  text-transform: uppercase
+}
+
+#cardholder-name-input::input-placeholder {
+  text-transform: none
+}
+
+#cardholder-name-input::-webkit-input-placeholder {
+  text-transform: none
+}
+
+#cardholder-name-input::-moz-placeholder {
+  text-transform: none
+}
+
+#cardholder-name-input:-ms-input-placeholder {
+  text-transform: none
+}
+
+.spinning-loader {
+  position: absolute;
+  z-index: 1;
+  margin: 0 auto;
+  width: 30px
+}
+
+.spinning-loader:before {
+  content: "";
+  display: block;
+  padding-top: 100%
+}
+
+.spinning-loader .circular {
+  -webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto
+}
+
+.spinning-loader .path {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #fff
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn)
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0
+  }
+
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px
+  }
+
+  to {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px
+  }
+}

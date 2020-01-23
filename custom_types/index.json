@@ -1,0 +1,218 @@
+[
+  {
+    "id": "category-dotnet",
+    "name": "Category - dotnet",
+    "repeatable": true,
+    "value": "category_dotnet.json"
+  },
+  {
+    "id": "category-graphql",
+    "name": "Category - GraphQL",
+    "repeatable": true,
+    "value": "category_graphql.json"
+  },
+  {
+    "id": "category-java",
+    "name": "Category - Java",
+    "repeatable": true,
+    "value": "category_java.json"
+  },
+  {
+    "id": "category-javascript",
+    "name": "Category - JavaScript",
+    "repeatable": true,
+    "value": "category_javascript.json"
+  },
+  {
+    "id": "category-laravel",
+    "name": "Category - Laravel",
+    "repeatable": true,
+    "value": "category_laravel.json"
+  },
+  {
+    "id": "category-nodejs",
+    "name": "Category - Nodejs",
+    "repeatable": true,
+    "value": "category_nodejs.json"
+  },
+  {
+    "id": "category-php",
+    "name": "Category - PHP",
+    "repeatable": true,
+    "value": "category_php.json"
+  },
+  {
+    "id": "category-reactjs",
+    "name": "Category - Reactjs",
+    "repeatable": true,
+    "value": "category_reactjs.json"
+  },
+  {
+    "id": "category-rest-api",
+    "name": "Category - Rest API",
+    "repeatable": true,
+    "value": "category_rest-api.json"
+  },
+  {
+    "id": "category-ruby",
+    "name": "Category - Ruby",
+    "repeatable": true,
+    "value": "category_ruby.json"
+  },
+  {
+    "id": "category-vuejs",
+    "name": "Category - Vue.js",
+    "repeatable": true,
+    "value": "category_vuejs.json"
+  },
+  {
+    "id": "home",
+    "name": "Homepage",
+    "repeatable": false,
+    "value": "home.json"
+  },
+  {
+    "id": "layout",
+    "name": "Layout",
+    "repeatable": false,
+    "value": "layout.json"
+  },
+  {
+    "id": "nav-dotnet",
+    "name": "Navigation - dotnet",
+    "repeatable": false,
+    "value": "nav_dotnet.json"
+  },
+  {
+    "id": "nav-graphql",
+    "name": "Navigation - GraphQL",
+    "repeatable": false,
+    "value": "nav_graphql.json"
+  },
+  {
+    "id": "nav-java",
+    "name": "Navigation - Java",
+    "repeatable": false,
+    "value": "nav_java.json"
+  },
+  {
+    "id": "nav-javascript",
+    "name": "Navigation - Javascript",
+    "repeatable": false,
+    "value": "nav_javascript.json"
+  },
+  {
+    "id": "nav-language",
+    "name": "Navigation technologies",
+    "repeatable": false,
+    "value": "nav_language.json"
+  },
+  {
+    "id": "nav-laravel",
+    "name": "Navigation - Laravel",
+    "repeatable": false,
+    "value": "nav_laravel.json"
+  },
+  {
+    "id": "nav-nodejs",
+    "name": "Navigation - NodeJS",
+    "repeatable": false,
+    "value": "nav_nodejs.json"
+  },
+  {
+    "id": "nav-php",
+    "name": "Navigation - PHP",
+    "repeatable": false,
+    "value": "nav_php.json"
+  },
+  {
+    "id": "nav-reactjs",
+    "name": "Navigation - Reactjs",
+    "repeatable": false,
+    "value": "nav_reactjs.json"
+  },
+  {
+    "id": "nav-rest-api",
+    "name": "Navigation - Rest api",
+    "repeatable": false,
+    "value": "nav_rest-api.json"
+  },
+  {
+    "id": "nav-ruby",
+    "name": "Navigation - Ruby",
+    "repeatable": false,
+    "value": "nav_ruby.json"
+  },
+  {
+    "id": "nav-vuejs",
+    "name": "Navigation - Vue.js",
+    "repeatable": false,
+    "value": "nav_vuejs.json"
+  },
+  {
+    "id": "page-dotnet",
+    "name": "Page - dotnet",
+    "repeatable": true,
+    "value": "page_dotnet.json"
+  },
+  {
+    "id": "page-graphql",
+    "name": "Page - GraphQL",
+    "repeatable": true,
+    "value": "page_graphql.json"
+  },
+  {
+    "id": "page-java",
+    "name": "Page - Java",
+    "repeatable": true,
+    "value": "page_java.json"
+  },
+  {
+    "id": "page-javascript",
+    "name": "Page - JavaScript",
+    "repeatable": true,
+    "value": "page_javascript.json"
+  },
+  {
+    "id": "page-laravel",
+    "name": "Page - Laravel",
+    "repeatable": true,
+    "value": "page_laravel.json"
+  },
+  {
+    "id": "page-nodejs",
+    "name": "Page - NodeJS",
+    "repeatable": true,
+    "value": "page_nodejs.json"
+  },
+  {
+    "id": "page-php",
+    "name": "Page - PHP",
+    "repeatable": true,
+    "value": "page_php.json"
+  },
+  {
+    "id": "page-reactjs",
+    "name": "Page - Reactjs",
+    "repeatable": true,
+    "value": "page_reactjs.json"
+  },
+  {
+    "id": "page-rest-api",
+    "name": "Page - Rest API",
+    "repeatable": true,
+    "value": "page_rest-api.json"
+  },
+  {
+    "id": "page-ruby",
+    "name": "Page - Ruby",
+    "repeatable": true,
+    "value": "page_ruby.json"
+  },
+  {
+    "id": "page-vuejs",
+    "name": "Page - Vue.js",
+    "repeatable": true,
+    "value": "page_vuejs.json"
+  }
+]

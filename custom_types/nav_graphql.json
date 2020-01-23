@@ -1,0 +1,81 @@
+{
+  "Menu" : {
+    "display-name" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item, o-list-item",
+        "label" : "Display name"
+      }
+    },
+    "items" : {
+      "type" : "Slices",
+      "config" : {
+        "choices" : {
+          "with-submenu" : {
+            "type" : "Slice",
+            "config" : {
+              "label" : "with-submenu"
+            },
+            "non-repeat" : {
+              "label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "label" : "Label"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "page-graphql", "category-graphql" ],
+                  "label" : "Page Link"
+                }
+              }
+            },
+            "repeat" : {
+              "label" : {
+                "type" : "StructuredText",
+                "config" : {
+                  "label" : "Label"
+                }
+              },
+              "link" : {
+                "type" : "Link",
+                "config" : {
+                  "select" : "document",
+                  "customtypes" : [ "category-graphql", "page-graphql" ],
+                  "label" : "Page link",
+                  "placeholder" : "Link to the page"
+                }
+              }
+            }
+          },
+          "without-submenu" : {
+            "type" : "Group",
+            "config" : {
+              "label" : "without-submenu",
+              "repeat" : false,
+              "fields" : {
+                "label" : {
+                  "type" : "StructuredText",
+                  "config" : {
+                    "placeholder" : "label for the item",
+                    "label" : " Item label"
+                  }
+                },
+                "link" : {
+                  "type" : "Link",
+                  "config" : {
+                    "placeholder" : "Link for the item",
+                    "label" : " Item Link",
+                    "select" : "document"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

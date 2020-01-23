@@ -1,0 +1,425 @@
+
+
+@font-face {
+  font-family: Icons;
+  src: url(../fonts/batch-icons-webfont.eot);
+  src: url(../fonts/batch-icons-webfont.eot?#iefix) format("embeddngaed-opentype"), url(../fonts/batch-icons-webfont.woff) format("woff"), url(../fonts/batch-icons-webfont.ttf) format("truetype"), url(../fonts/batch-icons-webfont.svg) format("svg");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: prismic-website;
+  src: url(../fonts/web/prismic-website.eot) format("eot");
+  src: url(../fonts/web/prismic-website.woff) format("woff"), url(../fonts/web/prismic-website.svg#abcd) format("svg"), url(../fonts/web/prismic-website.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal
+}
+
+[class*=" icon-"]:before,
+[class^=icon-]:before {
+  font-family: prismic-website;
+  font-style: normal;
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: inherit
+}
+
+.icon-done:before {
+  content: "\E001"
+}
+
+.icon-arrow-drop-down:before {
+  content: "\E002"
+}
+
+.icon-mode-edit:before {
+  content: "\E003"
+}
+
+.icon-menu:before {
+  content: "\E004"
+}
+
+.icon-close:before {
+  content: "\E005"
+}
+
+.icon-arrow-right:before {
+  content: "\E006"
+}
+
+.icon-arrow-forward:before {
+  content: "\E007"
+}
+
+
+
+
+a.doc-tab {
+  text-decoration: none;
+  text-align: center;
+  background-color: #eff0f7;
+  border-top: 5px solid #eff0f7;
+  color: #2c2b59 !important;
+  width: 33.33333%;
+  display: block;
+  float: left;
+  padding: 3%
+}
+
+a.doc-tab:before {
+  font-size: 24px;
+  position: relative;
+  top: 6px;
+  left: -6px
+}
+
+a.doc-tab.active {
+  color: #4d92ce !important;
+  border-top-color: #4d92ce;
+  background: #fff
+}
+
+a.doc-tab:hover {
+  text-decoration: none !important;
+  background: #e4e6f4 !important;
+  border-top: 5px solid #e4e6f4 !important
+}
+
+.tab-content .langage-tabs {
+  display: none
+}
+
+@media screen and (max-width:640px) {
+  a.doc-tab {
+    font-size: 14px
+  }
+}
+
+.doc-tabs {
+  width: 100%;
+  height: 50px;
+  display: table;
+  table-layout: fixed;
+  padding: 35px 0 25px
+}
+
+@media screen and (max-width:1024px) {
+  .new-doc-page .doc-tabs .doc-tab:before {
+    display: none
+  }
+}
+
+
+
+
+
+
+
+
+
+.new-doc-page .sample-illu {
+  margin: 3em auto 2em
+}
+
+.new-doc-page .exampleButtons {
+  text-align: center
+}
+
+.new-doc-page .exampleButtons a {
+  margin: 0 .5em 1em;
+  background-color: #4d92ce;
+  color: #fff
+}
+
+.new-doc-page .exampleButtons a:hover {
+  background-color: #4d92ce
+}
+
+@media screen and (max-width:640px) {
+
+  .new-doc-page .exampleButtons {
+    text-align: center
+  }
+
+  .new-doc-page .exampleButtons a {
+    width: 100%;
+    padding: 1.2em 0;
+    margin: .5em 0;
+    background-color: #4d92ce;
+    color: #fff
+  }
+
+  .new-doc-page .exampleButtons a:hover {
+    background-color: #ebaf50
+  }
+}
+
+
+
+
+/* > .new-doc-page main > div .navbar-wrapper nav > ul li ul.fields li:first-child {
+  margin-top: 10px
+} */
+
+
+
+
+.new-doc-page section ul.langage-tabs {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  margin-top: 2em;
+  height: 18px;
+  font: 12px Helvetica Neue, Helvetica, arial, freesans, clean, sans-serif
+}
+
+.new-doc-page section ul.langage-tabs li {
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 5px 10px;
+  display: inline;
+  cursor: pointer;
+  background-color: #f7f7f7
+}
+
+.new-doc-page section article ul.langage-tabs {
+  color: #fff
+}
+
+.new-doc-page section article ul.langage-tabs li {
+  border-top: 1px solid #172034;
+  border-right: 1px solid #172034;
+  background-color: #293248
+}
+
+.new-doc-page section article ul.langage-tabs li:first-child {
+  border-top-left-radius: 7px
+}
+
+.new-doc-page section article ul.langage-tabs li:last-child {
+  border-top-right-radius: 5px
+}
+
+.new-doc-page section article ul.langage-tabs li.active {
+  background-color: #172034
+}
+
+.new-doc-page section #lead .langage-tabs {
+  display: none;
+  height: auto;
+  margin-top: 0
+}
+
+.new-doc-page section #lead .langage-tabs li {
+  border: none;
+  display: block
+}
+
+
+
+
+
+.new-doc-page section pre.gist {
+  margin: 0
+}
+
+.new-doc-page section a.part span {
+  display: none
+}
+
+
+
+
+
+
+.new-doc-page section #lead {
+  float: right;
+  padding-left: 20px
+}
+
+.new-doc-page section #lead .lead-label {
+  display: none;
+  vertical-align: middle;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #303a47;
+  text-transform: uppercase;
+  background-color: #e4ecf7
+}
+
+.new-doc-page section #lead .lead-label .caret {
+  text-align: center;
+  float: right;
+  box-sizing: border-box
+}
+
+.new-doc-page section #lead .lead-label .caret:before {
+  content: "\F149";
+  font-family: Icons;
+  color: #4e92df;
+  font-size: 18px
+}
+
+.new-doc-page section #lead .lead-block {
+  font-weight: 600;
+  font-size: 16px;
+  display: none;
+  padding: 20px;
+  border: none;
+  margin-bottom: 40px;
+  background-color: #f8fafd;
+  color: #fff
+}
+
+.new-doc-page section #lead .lead-block ul {
+  padding-left: 0
+}
+
+.new-doc-page section #lead .lead-block ul li {
+  list-style-type: none
+}
+
+.new-doc-page section #lead .lead-block a,
+.new-doc-page section #lead .lead-block a:visited {
+  color: #708090;
+  text-decoration: none
+}
+
+.new-doc-page section #lead .lead-block a.github:before,
+.new-doc-page section #lead .lead-block a:visited.github:before {
+  color: #4e92df;
+  font-family: FontAwesome;
+  content: "\F113";
+  padding-right: 5px;
+  width: 22px;
+  display: inline-block;
+  text-align: center
+}
+
+.new-doc-page section #lead .lead-block a.apiref:before,
+.new-doc-page section #lead .lead-block a:visited.apiref:before {
+  color: #4e92df;
+  font-family: FontAwesome;
+  content: "\F02D";
+  padding-right: 5px;
+  width: 22px;
+  display: inline-block;
+  text-align: center
+}
+
+.new-doc-page section #lead .lead-block a.starterkit:before,
+.new-doc-page section #lead .lead-block a:visited.starterkit:before {
+  color: #4e92df;
+  font-family: FontAwesome;
+  content: "\F0E7";
+  padding-right: 5px;
+  width: 22px;
+  display: inline-block;
+  text-align: center
+}
+
+.new-doc-page section #lead .lead-block a.other:before,
+.new-doc-page section #lead .lead-block a:visited.other:before {
+  color: #4e92df;
+  font-family: FontAwesome;
+  content: "\F0AC";
+  padding-right: 5px;
+  width: 22px;
+  display: inline-block;
+  text-align: center
+}
+
+
+
+
+
+
+
+
+.new-doc-page section .tab-content h2 {
+  margin-top: 1em !important;
+  border-bottom: 1px solid #e4e4e4;
+  padding-bottom: 10px
+}
+
+.new-doc-page section .tab-content h5 {
+  background: #f8f8fc;
+  font-size: 15px;
+  font-weight: 600;
+  border-left: 4px solid #eff0f7;
+  padding: 12px 10px 10px
+}
+
+
+
+
+
+
+
+
+.new-doc-page main > div .navbar-wrapper nav .language {
+  margin: 2rem 0
+}
+
+@media screen and (min-width:40em) {
+  .new-doc-page main > div .navbar-wrapper nav .language {
+    display: none
+  }
+}
+
+.new-doc-page main > div .navbar-wrapper nav .language .select-container {
+  align-items: center
+}
+
+.new-doc-page main > div .navbar-wrapper nav .language .select-container .select-wrapper {
+  width: auto;
+  height: auto;
+  position: relative
+}
+
+@media screen and (min-width:64em) {
+  .new-doc-page main > div .navbar-wrapper nav .language .select-container .select-wrapper {
+    margin-bottom: 3rem
+  }
+}
+
+.new-doc-page main > div .navbar-wrapper nav .language .select-container .select-wrapper:after {
+  font-family: FontAwesome;
+  content: "\F107";
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  color: #fff;
+  font-weight: 600;
+  pointer-events: none
+}
+
+.new-doc-page main > div .navbar-wrapper nav .language .select-container select {
+  padding: .6rem 2rem .6rem 1rem;
+  background-color: #f74a82;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius: 6px
+}
+
+.new-doc-page main > div .navbar-wrapper nav .language .select-container select:focus {
+  outline: none
+}
+
+.new-doc-page main > div .navbar-wrapper nav .language .select-container select:hover {
+  cursor: pointer
+}
+
+
+
+
+
+
+
+
